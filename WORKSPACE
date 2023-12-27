@@ -56,3 +56,10 @@ git_repository(
     remote = "https://github.com/eranpeer/FakeIt",
     tag = "2.4.0",
 )
+
+git_repository(
+    name = "com_github_martinus_nanobench",
+    build_file = "//third_party/nanobench:BUILD",
+    remote = "https://github.com/martinus/nanobench",
+    tag = "v4.3.11",
+)
