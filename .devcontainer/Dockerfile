@@ -32,9 +32,8 @@ RUN if [[ `dpkg --print-architecture` == "arm64" ]]; then \
 # Install coverage dependencies: java and lcov
 #
 RUN apt-get update
-
 RUN export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends default-jdk lcov
+    && apt-get -y install --no-install-recommends default-jdk lcov libncurses5
 
 #
 # Set up command history volume

@@ -1,25 +1,23 @@
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
-git_repository(
-    name = "com_grailbio_bazel_toolchain",
-    remote = "https://github.com/grailbio/bazel-toolchain",
-    tag = "0.10.3",
+http_archive(
+    name = "toolchains_llvm",
+    sha256 = "b7cd301ef7b0ece28d20d3e778697a5e3b81828393150bed04838c0c52963a01",
+    strip_prefix = "toolchains_llvm-0.10.3",
+ln -s /usr/lib/libncursesw.so.6 /usr/lib/libtinfo.so.5    canonical_id = "0.10.3",
+    url = "https://github.com/grailbio/bazel-toolchain/releases/download/0.10.3/toolchains_llvm-0.10.3.tar.gz",
 )
 
-load("@com_grailbio_bazel_toolchain//toolchain:deps.bzl", "bazel_toolchain_dependencies")
+load("@toolchains_llvm//toolchain:deps.bzl", "bazel_toolchain_dependencies")
 
 bazel_toolchain_dependencies()
 
-load("@com_grailbio_bazel_toolchain//toolchain:rules.bzl", "llvm_toolchain")
+load("@toolchains_llvm//toolchain:rules.bzl", "llvm_toolchain")
 
 llvm_toolchain(
     name = "llvm_toolchain",
-    llvm_version = "14.0.0",
-    stdlib = {
-        "linux-x86_64": "builtin-libc++",
-        "linux-aarch64": "builtin-libc++",
-    },
+    llvm_version = "16.0.0",
 )
 
 load("@llvm_toolchain//:toolchains.bzl", "llvm_register_toolchains")
