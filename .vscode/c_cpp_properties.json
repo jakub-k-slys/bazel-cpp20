@@ -4,8 +4,8 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/external/com_github_eranpeer_fakeit/include/fakeit",
-                "${workspaceFolder}/external/com_github_boost_ext_ut/include/"
+                "${workspaceFolder}/external/com_github_eranpeer_fakeit/include/**",
+                "${workspaceFolder}/external/com_github_boost_ext_ut/include/**"
             ],
             "defines": [],
             "cStandard": "gnu11",
