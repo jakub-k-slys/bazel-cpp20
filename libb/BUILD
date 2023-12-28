@@ -5,9 +5,7 @@ cc_library(
     srcs = glob(["src/*.cc"]),
     hdrs = glob(["include/*.h"]),
     includes = ["include"],
-    visibility = [
-        "//main:__pkg__",
-    ],
+    visibility = ["//visibility:public"],
 )
 
 cc_test(
@@ -25,5 +23,7 @@ cc_test(
     srcs = glob(["benchmark/*.cc"]),
     deps = [
         ":lib",
+        "//third_party/nanobench",
+        "@com_github_boost_ext_ut//:unittest",
     ],
 )

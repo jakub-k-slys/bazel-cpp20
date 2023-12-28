@@ -59,7 +59,7 @@ git_repository(
 
 git_repository(
     name = "com_github_martinus_nanobench",
-    build_file = "//third_party/nanobench:BUILD",
+    build_file = "//third_party/nanobench/nanobench_impl:BUILD",
     remote = "https://github.com/martinus/nanobench",
     tag = "v4.3.11",
 )

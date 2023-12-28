@@ -1,10 +1,12 @@
 load("@rules_cc//cc:defs.bzl", "cc_library")
 
 cc_library(
-    name = "libnanobench",
-    visibility = ["//visibility:public"],
-    hdrs = [
-        "src/include/nanobench.h",
+    name = "nanobench",
+    srcs = [
+        "nanobench.cpp",
     ],
-    includes = ["src/include"],
+    visibility = ["//visibility:public"],
+    deps = [
+        "@com_github_martinus_nanobench//:libnanobench",
+    ],
 )
