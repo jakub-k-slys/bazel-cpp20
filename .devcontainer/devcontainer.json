@@ -23,8 +23,6 @@
 		"ms-vscode.cpptools-extension-pack",
 		"ms-azuretools.vscode-docker",
 		"BazelBuild.vscode-bazel",
-		"StackBuild.bazel-stack-vscode",
-		"StackBuild.bazel-stack-vscode-cc"
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
