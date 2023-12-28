@@ -18,7 +18,7 @@ public:
 };
 }  // namespace
 
-std::unique_ptr<word_generator> create_generator() {
+std::unique_ptr<word_generator> create_word_generator() {
   return std::make_unique<helloworld_generator>();
 };
 }  // namespace sandbox

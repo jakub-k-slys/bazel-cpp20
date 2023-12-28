@@ -13,5 +13,5 @@ struct word_generator {
   virtual std::string next(unsigned times) const = 0;
 };
 
-std::unique_ptr<word_generator> create_generator();
+std::unique_ptr<word_generator> create_word_generator();
 };  // namespace sandbox
