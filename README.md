@@ -2,10 +2,10 @@
 The template sets up a coding environment for C++20 language standard. It uses Bazel as the build system. Clang toolchain is downloaded automatically when running the first build. 
 
 New lib can be easily added by copying curent lib and adding it as dependency to main module. Each lib is divided into:
-* include - where all the header files resides,
-* src - place where the actual implementation is,
-* test - unit tests,
-* benchmark - place for benchmarks.
+* _include_ - where all the header files resides,
+* _src_ - place where the actual implementation is,
+* _test_ - unit tests,
+* _benchmark_ - place for benchmarks.
 
 The following template uses:
 * [Bazel](https://bazel.build/) a fast, scalable, multi-language and extensible build system,
@@ -13,6 +13,7 @@ The following template uses:
 * [UT/μT](https://github.com/boost-ext/ut) C++ single header/single module, macro-free μ(micro)/Unit Testing Framework,
 * [nanobench](https://github.com/martinus/nanobench) Simple, fast, accurate single-header microbenchmarking functionality for C++11/14/17/20.
 
+## Prerequisites
 **Bazel** is prerequisite to compile the project.
 
 ## Building whole the project
