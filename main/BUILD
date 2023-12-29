@@ -5,4 +5,5 @@ cc_binary(
         "//liba:lib",
         "//libb:lib",
     ],
+    visibility = ["//visibility:public"],
 )

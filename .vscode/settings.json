@@ -84,5 +84,12 @@
     "editor.formatOnSave": true,
     "testMate.cpp.test.executables": "bazel-bin/**/*.runfiles/**/*{test,Test,TEST}*",
     "bazel.enableCodeLens": true,
-    "bazel.buildifierFixOnFormat": true
+    "bazel.buildifierFixOnFormat": true,
+    "bazel.executable": "/usr/local/bin/bazel",
+    "bsv.cc.compdb.targets": [
+        "//main:main",
+        "//liba:test",
+        "//libb:test",
+    ],
+    "bsv.bazel.executable": "/usr/local/bin/bazel"
 }
