@@ -1,4 +1,4 @@
-# C++20 template with Bazel.build and clang 16.0.0
+# C++20 template with Bazel.build and clang
 The template sets up a coding environment for C++20 language standard. It uses Bazel as the build system. Clang toolchain is downloaded automatically when running the first build. 
 
 New lib can be easily added by copying curent lib and adding it as dependency to main module. Each lib is divided into:
